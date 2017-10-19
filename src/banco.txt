@@ -1,0 +1,19 @@
+psql -h ec2-107-22-187-21.compute-1.amazonaws.com   -U cqfofntprpmnkr  -d df7l6qg1m3d3pb
+
+
+ user:     "_env:PGUSER:cqfofntprpmnkr"
+  password: "_env:PGPASS:d7b57467d00eb16cab05a51d951fb9cd6e0fa745d817ce19527af555f78bf886"
+  host:     "_env:PGHOST:ec2-107-22-187-21.compute-1.amazonaws.com"
+  port:     "_env:PGPORT:5432"
+  # See config/test-settings.yml for an override during tests
+  database: "_env:PGDATABASE:df7l6qg1m3d3pb"
+  poolsize: "_env:PGPOOLSIZE:10"
+  
+  curl -v -X POST https://haskalpha-romefeller.c9users.io/cliente -d '{"nome":"Alberto","cpf":"08062302822","salario":63500}'
+  curl -v -X POST https://haskalpha-romefeller.c9users.io/cliente -d '{"nome":"Luiz Roberto","cpf":"08062302822","salario":63500}'
+  
+  curl -X GET https://haskalpha-romefeller.c9users.io/cliente/1/buscar
+  
+  curl -X DELETE https://haskalpha-romefeller.c9users.io/cliente/1/apagar
+  
+  curl -v -X PUT https://haskalpha-romefeller.c9users.io/cliente/2/alterar -d '{"nome":"AnaPaula","cpf":"08062302822","salario":63500}'
